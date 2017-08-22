@@ -1,13 +1,103 @@
-It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him. 
-
-The hallway smelt of boiled cabbage and old rag mats. At one end of it a coloured poster, too large for indoor display, had been tacked to the wall. It depicted simply an enormous face, more than a metre wide: the face of a man of about forty-five, with a heavy black moustache and ruggedly handsome features. Winston made for the stairs. It was no use trying the lift. Even at the best of times it was seldom working, and at present the electric current was cut off during daylight hours. It was part of the economy drive in preparation for Hate Week. The flat was seven flights up, and Winston, who was thirty-nine and had a varicose ulcer above his right ankle, went slowly, resting several times on the way. On each landing, opposite the lift-shaft, the poster with the enormous face gazed from the wall. It was one of those pictures which are so contrived that the eyes follow you about when you move. BIG BROTHER IS WATCHING YOU, the caption beneath it ran. 
-
-Inside the flat a fruity voice was reading out a list of figures which had something to do with the production of pig-iron. The voice came from an oblong metal plaque like a dulled mirror which formed part of the surface of the right-hand wall. Winston turned a switch and the voice sank somewhat, though the words were still distinguishable. The instrument (the telescreen, it was called) could be dimmed, but there was no way of shutting it off completely. He moved over to the window: a smallish, frail figure, the meagreness of his body merely emphasized by the blue overalls which were the uniform of the party. His hair was very fair, his face naturally sanguine, his skin roughened by coarse soap and blunt razor blades and the cold of the winter that had just ended. 
-
-Outside, even through the shut window-pane, the world looked cold. Down in the street little eddies of wind were whirling dust and torn paper into spirals, and though the sun was shining and the sky a harsh blue, there seemed to be no colour in anything, except the posters that were plastered everywhere. The blackmoustachio'd face gazed down from every commanding corner. There was one on the house-front immediately opposite. BIG BROTHER IS WATCHING YOU, the caption said, while the dark eyes looked deep into Winston's own. Down at streetlevel another poster, torn at one corner, flapped fitfully in the wind, alternately covering and uncovering the single word INGSOC. In the far distance a helicopter skimmed down between the roofs, hovered for an instant like a bluebottle, and darted away again with a curving flight. It was the police patrol, snooping into people's windows. The patrols did not matter, however. Only the Thought Police mattered. 
-
-Behind Winston's back the voice from the telescreen was still babbling away about pig-iron and the overfulfilment of the Ninth Three-Year Plan. The telescreen received and transmitted simultaneously. Any sound that Winston made, above the level of a very low whisper, would be picked up by it, moreover, so long as he remained within the field of vision which the metal plaque commanded, he could be seen as well as heard. There was of course no way of knowing whether you were being watched at any given moment. How often, or on what system, the Thought Police plugged in on any individual wire was guesswork. It was even conceivable that they watched everybody all the time. But at any rate they could plug in your wire whenever they wanted to. You had to live -- did live, from habit that became instinct -- in the assumption that every sound you made was overheard, and, except in darkness, every movement scrutinized. 
-
-Winston kept his back turned to the telescreen. It was safer, though, as he well knew, even a back can be revealing. A kilometre away the Ministry of Truth, his place of work, towered vast and white above the grimy landscape. This, he thought with a sort of vague distaste -- this was London, chief city of Airstrip One, itself the third most populous of the provinces of Oceania. He tried to squeeze out some childhood memory that should tell him whether London had always been quite like this. Were there always these vistas of rotting nineteenth-century houses, their sides shored up with baulks of timber, their windows patched with cardboard and their roofs with corrugated iron, their crazy garden walls sagging in all directions? And the bombed sites where the plaster dust swirled in the air and the willow-herb straggled over the heaps of rubble; and the places where the bombs had cleared a larger patch and there had sprung up sordid colonies of wooden dwellings like chicken-houses? But it was no use, he could not remember: nothing remained of his childhood except a series of bright-lit tableaux occurring against no background and mostly unintelligible. 
-
-The Ministry of Truth -- Minitrue, in Newspeak -- was startlingly different from any other object in sight. It was an enormous pyramidal structure of glittering white concrete, soaring up, terrace after terrace, 300 metres into the air. From where Winston stood it was just possible to read, picked out on its white face in elegant lettering, the three slogans of the Party
+WHEN SUSAN CALVIN RETURNED FROM HYPER BASE, Alfred Tanning was waiting for her.
+The old man never spoke about his age, but everyone knew it to be over seventy-five. Yet
+his mind was keen, and if he had finally allowed himself to be made Director-Emeritus of
+Research with Bogert as acting Director, it did not prevent him from appearing in his
+office daily.
+ “How close are they to the Hyperatomic Drive?” he asked.
+ “I don’t know,” she replied irritably, “I didn’t ask.”
+ “Hmm. I wish they’d hurry. Because if they don’t, Consolidated might beat them
+to it, and beat us to it as well.”
+ “Consolidated. What have they got to do with it?”
+ “Well, we’re not the only ones with calculating machines. Ours may be
+positronic, but that doesn’t mean they’re better. Robertson is calling a big meeting about
+it tomorrow. He’s been waiting for you to come back.”
+ Robertson of U. S. Robot & Mechanical Men Corporation, son of the founder,
+pointed his lean nose at his general manager and his Adam’s apple jumped as he said,
+“You start now. Let’s get this straight.”
+ The general manager did so with alacrity, “Here’s the deal now, chief.
+Consolidated Robots approached us a month ago with a funny sort of proposition. They
+brought about five tons of figures, equations, all that sort of stuff. It was a problem, see,
+and they wanted an answer from The Brain. The terms were as follows--”
+ He ticked them off on thick fingers: “A hundred thousand for us if there is no
+solution and we can tell them the missing factors. Two hundred thousand if there is a
+solution, plus costs of construction of the machine involved, plus quarter interest in all
+profits derived therefrom. The problem concerns the development of an interstellar
+engine--”
+ Robertson frowned and his lean figure stiffened, “Despite the fact that they have a
+thinking machine of their own. Right?”
+ “Exactly what makes the whole proposition a foul ball, chief? Levver, take it from
+there.”
+ Abe Levver looked up from the far end of the conference table and smoothed his
+stubbled chin with a faint rasping sound. He smiled:
+ “It’s this way, sir. Consolidated had a thinking machine. It’s broken.”
+ “What?” Robertson half rose.
+ “That’s right. Broken! It’s kaput. Nobody knows why, but I got hold of some
+pretty interesting guesses -- like, for instance, that they asked it to give them an
+interstellar engine with the same set of information they came to us with, and that it
+cracked their machine wide open. It’s scrap -- just scrap now.”
+ “You get it, chief?” The general manager was wildly jubilant. “You get it? There
+isn’t any industrial research group of any size that isn’t trying to develop a space-warp
+engine, and Consolidated and U. S. Robots have the lead on the field with our super
+robot-brains. Now that they’ve managed to foul theirs up, we have a clear field. That’s
+the nub, the... uh... motivation. It will take them six years at least to build another and
+they’re sunk, unless they can break ours, too, with the same problem.”
+ The president of U. S. Robots bulged his eyes, “Why, the dirty rats--”
+ “Hold on, chief. There’s more to this.” He pointed a finger with a wide sweep,
+“Lanning, take it!”
+ Dr. Alfred Lanning viewed the proceedings with faint scorn -- his usual reaction
+to the doings of the vastly better-paid business and sales divisions. His unbelievable gray
+eyebrows hunched low and his voice was dry:
+ “From a scientific standpoint the situation, while not entirely clear, is subject to
+intelligent analysis. The question of interstellar travel under present conditions of
+physical theory is... uh... vague. The matter is wide open -- and the information given by
+Consolidated to its thinking machine, assuming these we have to be the same, was
+similarly wide open. Our mathematical department has given it a thorough analysis, and
+it seems Consolidated has included everything. Its material for submission contains all
+known developments of Franciacci’s space-warp theory, and, apparently, all pertinent
+astrophysical and electronic data. It’s quite a mouthful.”
+ Robertson followed anxiously. He interrupted, “Too much for The Brain to
+handle?”
+ Lanning shook his head decisively, “No. There are no known limits to The
+Brain’s capacity. It’s a different matter. It’s a question of the Robotic Laws. The Brain,
+for instance, could never supply a solution to a problem set to it if that solution, would
+involve the death or injury of humans. As far as it would be concerned, a problem with
+only such a solution would be insoluble. If such a problem is combined with an extremely
+urgent demand that it be answered, it is just possible that The Brain, only a robot after all,
+would be presented with a dilemma, where it could neither answer nor refuse to answer.
+Something of the sort must have happened to Consolidated’s machine.”
+ He paused, but the general manager urged on, “Go ahead, Dr. Tanning. Explain it
+the way you explained it to me.”
+ Lanning set his lips and raised his eyebrows in the direction of Dr. Susan Calvin
+who lifted her eyes from her precisely folded hands for the first time. Her voice was low
+and colorless.
+ “The nature of a robot reaction to a dilemma is startling,” she began. “Robot
+psychology is far from perfect -- as a specialist, I can assure you of that but it can be
+discussed in qualitative terms, because with all the complications introduced into a
+robot’s positronic brain, it is built by humans and is therefore built according to human
+values.
+ “Now a human caught in an impossibility often responds by a retreat from reality:
+by entry into a world of delusion, or by taking to drink, going off into hysteria, or
+jumping off a bridge. It all comes to the same thing -- a refusal or inability to face the
+situation squarely. And so, the robot, a dilemma at its mildest will disorder half its relays;
+and at its worst it will burn out every positronic brain path past repair.”
+ “I see,” said Robertson, who didn’t. “Now what about this information
+Consolidated’s wishing on us?”
+ “It undoubtedly involves,” said Dr. Calvin, “a problem of a forbidden sort. But
+The Brain is considerably different from Consolidated’s robot.”
+ “That’s right, chief. That’s right.” The general manager was energetically
+interruptive. “I want you to get this, because it’s the whole point of the situation.”
+ Susan Calvin’s eyes glittered behind the spectacles, and she continued patiently,
+“You see, sir, Consolidated’s machines, their Super-Thinker among them, are built
+without personality. They go in for functionalism, you know -- they have to, without U.
+S. Robot’s basic patents for the emotional brain paths. Their Thinker is merely a
+calculating machine on a grand scale, and a dilemma ruins it instantly.
+ “However, The Brain, our own machine, has a personality -- a child’s personality.
+It is a supremely deductive brain, but it resembles an idiot savant. It doesn’t really
+understand what it does -- it just does it. And because it is really a child, it is more
+resilient. Life isn’t so serious, you might say.”
+ The robopsychologist continued: “Here is what we’re going to do. We have
+divided all of Consolidated’s information into logical units. We are going to feed the
+units to The Brain singly and cautiously. When the factor enters -- the one that creates the
+dilemma -- The Brain’s child personality will hesitate. Its sense of judgment is not
+mature. There will be a perceptible interval before it will recognize a dilemma as such.
+And in that interval, it will reject the unit automatically -- before its brainpaths can be set

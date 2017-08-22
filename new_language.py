@@ -2,7 +2,7 @@ import random
 import time
 import re
 
-random.seed(123456789)
+random.seed(12345678)
 
 class CreateLanguage(object):
 
@@ -228,7 +228,7 @@ class CreateLanguage(object):
         consonant_syllables_list_end = []
         vowel_syllables_list = []
         vowel_syllables_list_end = []
-        for amount_wanted in xrange(0, 5000):
+        for amount_wanted in xrange(0, 10000):
             new_syllable = self.create_syllables()
             if new_syllable[1] == 'Vow':
                 if new_syllable[2] == 'Vow':
@@ -288,38 +288,64 @@ class CreateLanguage(object):
         return english_words
 
     def create_dictionary(self):
+
+        already_known_alien_words = []
         translation = []
-        english_words = self.english_lang
-        alien_words = self.word_sets
-        random.shuffle(alien_words)
-        for eng_word in english_words:
-            length_of_word = len(eng_word)
-            for alien_word in xrange(0, len(alien_words)):
-                if len(alien_words[alien_word]) == length_of_word:
-                    translation.append(alien_words[alien_word])
-                    alien_words.remove(alien_words[alien_word])
-                    break
+        with open('learned_alien_words.txt') as alien_lang:
+            for line in alien_lang:
+                already_known_alien_words.append(line.strip())
+
+        if len(already_known_alien_words) != len(self.word_sets):
+            translation = []
+            english_words = self.english_lang
+            alien_words = self.word_sets
+            random.shuffle(alien_words)
+            for eng_word in english_words:
+                length_of_word = len(eng_word)
+                for alien_word in xrange(0, len(alien_words)):
+                    if len(alien_words[alien_word]) == length_of_word:
+                        translation.append(alien_words[alien_word])
+                        alien_words.remove(alien_words[alien_word])
+                        break
+            with open('learned_alien_words.txt', 'r+') as alien_lang:
+                for word in xrange(0, len(translation)):
+                    if word != 0:
+                        alien_lang.write("\n")
+                    alien_lang.write(translation[word])
         return translation
 
     def translate_something(self):
         words_to_translate = []
         translation = []
         english_words = self.english_lang
+        not_wanted_list = ['.', ',', ';', ':', '!', '?', '`', '"', "'", "-"]
         with open('translate_me.txt') as english_lang:
             for line in english_lang:
                 for word in line.split():
-                    clean_word = word.lower().replace('.', '').replace(',', '')
+                    if word == '':
+                        break
+                    clean_word = word.lower()
+                    for cleanups in not_wanted_list:
+                        word.replace(cleanups, '')
                     words_to_translate.append(clean_word)
             word_to_translate_string = line
 
         for word_to_translate in words_to_translate:
-            if word_to_translate in english_words:
-                for word_can_translate in xrange(0, len(english_words)):
-                    if word_to_translate == english_words[word_can_translate]:
-                        translation.append(self.dictionary[word_can_translate])
-                        break
-            else:
-                translation.append(word_to_translate)
+            with open('english_words.txt', "a") as english_lang:
+                if word_to_translate in english_words:
+                    for word_can_translate in xrange(0, len(english_words)):
+                        if word_to_translate == english_words[word_can_translate]:
+                            try:
+                                translation.append(self.dictionary[word_can_translate])
+                            finally:
+                                break
+                else:
+                    english_lang.write("\n")
+                    clean_word = word_to_translate.lower()
+                    for cleanups in not_wanted_list:
+                        word_to_translate.replace(cleanups, '')
+                    english_lang.write(clean_word)
+                    translation.append(clean_word)
         # print english_words2
         translation_conc = ''
         for translated_words in translation:
