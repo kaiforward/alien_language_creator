@@ -13,3 +13,13 @@ by doing this it can learn the kind of words you are interested in using and onl
 ## How It Works
 
 The algorithm for creating the words uses a simple vowel to consonant rhythm, as well as different chances for double letter combinations.
+
+## To run it
+
+Open this project in an editor, make sure english_words.txt and learned_alien_words.txt are empty, then copy any block of text, or the contents of 1000_english_words.txt into the translate_me.txt file.
+
+Then run new_language.py.
+
+on the first run through it will learn all the words in translate_me.txt and on a second run through will provide the translation.
+
+You can continue to add to the dictionary by adding new blocks of text to translate_me.txt
