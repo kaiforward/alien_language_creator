@@ -2,7 +2,7 @@ import random
 import time
 import re
 
-random.seed(12345678)
+random.seed(123456780)
 
 class CreateLanguage(object):
 
@@ -18,9 +18,9 @@ class CreateLanguage(object):
         self.power_consonant_ends = self.create_power_consonant_ends()
         # self.power_vowel_doubles =
         # self.power_consonant_doubles =
-        self.syllables = self.create_syllables()
-        self.syllables_list = self.create_syllable_list()
-        self.word_sets = self.create_word_set()
+        self.syllables = self.create_syllables(length_needed=1)
+        # self.syllables_list = self.create_syllable_list()
+        self.word_sets = []
         self.english_lang = self.import_english()
         self.dictionary = self.create_dictionary()
 
@@ -166,7 +166,7 @@ class CreateLanguage(object):
 
         return power_consonant_ends
 
-    def create_syllables(self):
+    def create_syllables(self, length_needed):
 
         # Create First Letter
         power_vowels = self.power_vowels
@@ -175,7 +175,7 @@ class CreateLanguage(object):
         power_consonant_starts = self.power_consonant_starts
         letters = ['Vow', "Con"]
 
-        syllable_length = random.randint(1, 4)
+        syllable_length = length_needed
         syllable = ""
         first_letter = ''
         previous_letter_type = random.choice(letters)
@@ -192,7 +192,7 @@ class CreateLanguage(object):
                     if len(power_vowel_starts) != 0:
                         current_letter = random.choice(power_vowel_starts)
                     else:
-                        current_letter = random.choice(power_vowels)
+                        current_letter = random.choice(self.vowels)
                 else:
                     current_letter = random.choice(power_vowels)
                 syllable += current_letter
@@ -203,7 +203,7 @@ class CreateLanguage(object):
                     if len(power_consonant_starts) != 0 and syllables == 0:  # must exist and be first letter
                         current_letter = random.choice(power_consonant_starts)
                     else:
-                        current_letter = random.choice(power_consonants)
+                        current_letter = random.choice(self.consonants)
                 else:
                     current_letter = random.choice(power_consonants)
                 syllable += current_letter
@@ -220,65 +220,67 @@ class CreateLanguage(object):
             else:
                 syllable += random.choice(power_consonants)
             end_letter = 'Con'
-        return syllable, first_letter, end_letter
+        return syllable
 
-    def create_syllable_list(self):
+    # HMMMM
+    # def create_syllable_list(self):
+    #
+    #     consonant_syllables_list = []
+    #     consonant_syllables_list_end = []
+    #     vowel_syllables_list = []
+    #     vowel_syllables_list_end = []
+    #     for amount_wanted in xrange(0, 10000):
+    #         new_syllable = self.create_syllables()
+    #         if new_syllable[1] == 'Vow':
+    #             if new_syllable[2] == 'Vow':
+    #                 if new_syllable[0] not in vowel_syllables_list_end:
+    #                     vowel_syllables_list_end.append(new_syllable[0])
+    #             else:
+    #                 if new_syllable[0] not in vowel_syllables_list:
+    #                     vowel_syllables_list.append(new_syllable[0])
+    #         if new_syllable[1] == 'Con':
+    #             if new_syllable[2] == 'Con':
+    #                 if new_syllable[0] not in consonant_syllables_list_end:
+    #                     consonant_syllables_list_end.append(new_syllable[0])
+    #             else:
+    #                 if new_syllable[0] not in consonant_syllables_list:
+    #                     consonant_syllables_list.append(new_syllable[0])
+    #     return vowel_syllables_list, vowel_syllables_list_end, consonant_syllables_list, consonant_syllables_list_end
+    #
 
-        consonant_syllables_list = []
-        consonant_syllables_list_end = []
-        vowel_syllables_list = []
-        vowel_syllables_list_end = []
-        for amount_wanted in xrange(0, 10000):
-            new_syllable = self.create_syllables()
-            if new_syllable[1] == 'Vow':
-                if new_syllable[2] == 'Vow':
-                    if new_syllable[0] not in vowel_syllables_list_end:
-                        vowel_syllables_list_end.append(new_syllable[0])
-                else:
-                    if new_syllable[0] not in vowel_syllables_list:
-                        vowel_syllables_list.append(new_syllable[0])
-            if new_syllable[1] == 'Con':
-                if new_syllable[2] == 'Con':
-                    if new_syllable[0] not in consonant_syllables_list_end:
-                        consonant_syllables_list_end.append(new_syllable[0])
-                else:
-                    if new_syllable[0] not in consonant_syllables_list:
-                        consonant_syllables_list.append(new_syllable[0])
-        return vowel_syllables_list, vowel_syllables_list_end, consonant_syllables_list, consonant_syllables_list_end
-
-    def create_word_set(self):
-        choice_of_syllables = self.syllables_list
-        word_sets = []
-
-        word_sets += self.power_vowels
-
-        for single_syllables_set in xrange(0, len(self.syllables_list)):  # add single_syllables first to also be used
-            syllable_list = self.syllables_list[single_syllables_set]
-            for single_syllables in xrange(0, len(syllable_list)):
-                single_syllable = syllable_list[single_syllables]
-                word_sets.append(single_syllable)
-
-        vc = choice_of_syllables[0]
-        vv = choice_of_syllables[1]
-        cv = choice_of_syllables[2]
-        cc = choice_of_syllables[3]
-
-        syllable_combinations = [
-            [vv, vc],
-            [cv, cc],
-            [cv, cc],
-            [vc, vv]
-        ]
-
-        for word_sets_i in xrange(0, 3):
-            next_syllable_set = syllable_combinations[word_sets_i]
-            for syllable in xrange(0, len(next_syllable_set)):
-                for words in xrange(0, len(choice_of_syllables[word_sets_i])):
-                    for variations in xrange(0, len(next_syllable_set[syllable])):
-                        first_syllable = choice_of_syllables[word_sets_i][words]
-                        first_syllable += next_syllable_set[syllable][variations]
-                        word_sets.append(first_syllable)
-        return word_sets
+    # def create_word_set(self):
+    #     choice_of_syllables = self.syllables_list
+    #     word_sets = []
+    #
+    #     word_sets += self.power_vowels
+    #
+    #     for single_syllables_set in xrange(0, len(self.syllables_list)):  # add single_syllables first to also be used
+    #         syllable_list = self.syllables_list[single_syllables_set]
+    #         for single_syllables in xrange(0, len(syllable_list)):
+    #             single_syllable = syllable_list[single_syllables]
+    #             word_sets.append(single_syllable)
+    #
+    #     vc = choice_of_syllables[0]
+    #     vv = choice_of_syllables[1]
+    #     cv = choice_of_syllables[2]
+    #     cc = choice_of_syllables[3]
+    #
+    #     syllable_combinations = [
+    #         [vv, vc],
+    #         [cv, cc],
+    #         [cv, cc],
+    #         [vc, vv]
+    #     ]
+    #
+    #     for word_sets_i in xrange(0, 3):
+    #         next_syllable_set = syllable_combinations[word_sets_i]
+    #         for syllable in xrange(0, len(next_syllable_set)):
+    #             for words in xrange(0, len(choice_of_syllables[word_sets_i])):
+    #                 for variations in xrange(0, len(next_syllable_set[syllable])):
+    #                     first_syllable = choice_of_syllables[word_sets_i][words]
+    #                     first_syllable += next_syllable_set[syllable][variations]
+    #                     word_sets.append(first_syllable)
+    #     return word_sets
 
     def import_english(self):
         english_words = []
@@ -295,24 +297,52 @@ class CreateLanguage(object):
             for line in alien_lang:
                 already_known_alien_words.append(line.strip())
 
-        if len(already_known_alien_words) != len(self.word_sets):
-            translation = []
-            english_words = self.english_lang
-            alien_words = self.word_sets
-            random.shuffle(alien_words)
-            for eng_word in english_words:
-                length_of_word = len(eng_word)
-                for alien_word in xrange(0, len(alien_words)):
-                    if len(alien_words[alien_word]) == length_of_word:
-                        translation.append(alien_words[alien_word])
-                        alien_words.remove(alien_words[alien_word])
-                        break
-            with open('learned_alien_words.txt', 'r+') as alien_lang:
-                for word in xrange(0, len(translation)):
-                    if word != 0:
-                        alien_lang.write("\n")
-                    alien_lang.write(translation[word])
+        # if len(already_known_alien_words) != len(self.import_english()):
+        translation = []
+        english_words = self.english_lang
+        for eng_word in english_words:
+            length_of_word = len(eng_word)
+            if length_of_word == 0:
+                alien_word = random.choice(self.power_vowels)
+            elif length_of_word == 1:
+                alien_word = random.choice(self.create_syllables(2))
+            else:
+                alien_word = self.create_syllables(length_of_word-1)
+            if alien_word not in translation:
+                translation.append(alien_word)
+        with open('learned_alien_words.txt', 'r+') as alien_lang:
+            for word in xrange(0, len(translation)):
+                if word != 0:
+                    alien_lang.write("\n")
+                alien_lang.write(translation[word])
         return translation
+
+    # def create_dictionary(self):
+    #
+    #     already_known_alien_words = []
+    #     translation = []
+    #     with open('learned_alien_words.txt') as alien_lang:
+    #         for line in alien_lang:
+    #             already_known_alien_words.append(line.strip())
+    #
+    #     if len(already_known_alien_words) != len(self.word_sets):
+    #         translation = []
+    #         english_words = self.english_lang
+    #         alien_words = self.word_sets
+    #         random.shuffle(alien_words)
+    #         for eng_word in english_words:
+    #             length_of_word = len(eng_word)
+    #             for alien_word in xrange(0, len(alien_words)):
+    #                 if len(alien_words[alien_word]) == length_of_word:
+    #                     translation.append(alien_words[alien_word])
+    #                     alien_words.remove(alien_words[alien_word])
+    #                     break
+    #         with open('learned_alien_words.txt', 'r+') as alien_lang:
+    #             for word in xrange(0, len(translation)):
+    #                 if word != 0:
+    #                     alien_lang.write("\n")
+    #                 alien_lang.write(translation[word])
+    #     return translation
 
     def translate_something(self):
         words_to_translate = []
@@ -331,21 +361,22 @@ class CreateLanguage(object):
             word_to_translate_string = line
 
         for word_to_translate in words_to_translate:
-            with open('english_words.txt', "a") as english_lang:
-                if word_to_translate in english_words:
-                    for word_can_translate in xrange(0, len(english_words)):
-                        if word_to_translate == english_words[word_can_translate]:
-                            try:
-                                translation.append(self.dictionary[word_can_translate])
-                            finally:
-                                break
-                else:
+            if word_to_translate in english_words:
+                for word_can_translate in xrange(0, len(english_words)):
+                    if word_to_translate == english_words[word_can_translate]:
+                        try:
+                            translation.append(self.dictionary[word_can_translate])
+                        finally:
+                            break
+            else:
+                with open('english_words.txt', "a") as english_lang:
                     english_lang.write("\n")
-                    clean_word = word_to_translate.lower()
+                    clean_word_eng = word_to_translate.lower()
                     for cleanups in not_wanted_list:
-                        word_to_translate.replace(cleanups, '')
-                    english_lang.write(clean_word)
-                    translation.append(clean_word)
+                        clean_word_eng.replace(cleanups, '')
+                    english_lang.write(clean_word_eng)
+                    translation.append(clean_word_eng)
+                    english_words.append(clean_word_eng)
         # print english_words2
         translation_conc = ''
         for translated_words in translation:
@@ -368,10 +399,10 @@ print 'Power Consonants', language.power_consonants
 print 'Power Vowel Starts', language.power_vowel_starts
 print 'Power_consonant_Starts', language.power_consonant_starts
 print "Power_consonant_ends", language.power_consonant_ends
-print language.syllables_list[0]
-print language.syllables_list[1]
-print language.syllables_list[2]
-print language.syllables_list[3]
+# print language.syllables_list[0]
+# print language.syllables_list[1]
+# print language.syllables_list[2]
+# print language.syllables_list[3]
 # print language.word_sets
 print language.english_lang
 print language.dictionary
